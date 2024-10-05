@@ -22,7 +22,6 @@ return [
     'empty_cart'=>'ليس لديك منجات في السلة',
     'order_success'=>'تم عمل طلبك بنجاح سيقوم فريقنا بالتواصل معك',
     'emailNotFount'=>'البريدالاكتروني غير موجود لدينا',
-    'logout'=>'تم تسجيل الخروج بنجاح',
     'incorrect_code'=>'الكود غير صحيح',
     'statement_required'=>'ادخل يبان المصروف',
     'password_required'=>'ادخل الرمز السري',
@@ -40,6 +39,7 @@ return [
     'branch_name_required'=>'اسم الفرع مطلوب',
     'branch_address_required'=>'عنوان الفرع مطلوب',
     'commercial_record_name_required'=>'اسم السجل التجاري مطلوب',
-    'cannot_delete_client'=> 'لا يمكن حذف عميل لديه فواتير سابقه'
+    'cannot_delete_client'=> 'لا يمكن حذف عميل لديه فواتير سابقه',
+    'username_required' => 'اسم المستخدم مطلوب'
 
 ];

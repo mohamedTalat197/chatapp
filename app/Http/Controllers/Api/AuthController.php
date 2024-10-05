@@ -49,6 +49,7 @@ class AuthController extends Controller
      */
     public function login(Request $request)
     {
+        App::setLocale($request->header('lang'));
         $response = $this->userRepo->getUserByEmail($request->email);
         if ($response->operationType == ERROR)
             return $this->apiResponseMessage(0, $response->error);
@@ -76,12 +77,13 @@ class AuthController extends Controller
      */
     public function logout(Request $request)
     {
+        App::setLocale($request->header('lang'));
         $user = Auth::user();
         $this->userRepo->updateISOnline($user, false);
         $user->tokens->each(function ($token) {
             $token->delete();
         });
-        return $this->apiResponseMessage(1, __("responseMessage.success"));
+        return $this->apiResponseMessage(1, __("responseMessage.logout"));
     }
 
 

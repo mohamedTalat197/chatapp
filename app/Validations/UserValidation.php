@@ -11,6 +11,7 @@ class UserValidation
     {
         $input = $payload->all();
         $validationMessages = [
+            'username.required'=> __('validationMessage.username_required'),
             'email.required'=> __('validationMessage.email_required'),
             'email.unique'=> __('validationMessage.email_unique'),
         ];
@@ -30,6 +31,7 @@ class UserValidation
      */
     private function validateUser($user_id){
         return [
+            'username' => 'required',
             'email' => $user_id == 0 ? 'required|unique:users|regex:/(.+)@(.+)\.(.+)/i' : 'required|unique:users,email,' . $user_id . '|regex:/(.+)@(.+)\.(.+)/i',
             'password' => $user_id != 0 ? '' : 'required',
         ];

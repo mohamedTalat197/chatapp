@@ -31,6 +31,7 @@ class MessageController extends Controller
         $messages = $this->messageRepo->get($request);
         return $this->apiResponseData(new MessageCollection($messages));
     }
+
     /**
      * @param Request $request
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response

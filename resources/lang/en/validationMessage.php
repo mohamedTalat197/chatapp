@@ -41,5 +41,6 @@ return [
     'branch_name_required'=>'branch name required',
     'branch_address_required'=>'branch address required',
     'commercial_record_name_required'=>'commercial record name required',
-    'cannot_delete_client'=> 'you can not delete client that has invoices'
+    'cannot_delete_client'=> 'you can not delete client that has invoices',
+    'username_required' => 'username is required'
 ];

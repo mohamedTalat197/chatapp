@@ -20,6 +20,7 @@ class MessageResource extends JsonResource
         return [
             'id' => $this->id,
             'content' => $this->content,
+            'is_seen' => (int) $this->is_seen,
             'sender' => new UserResource($this->sender),
             'recipient' => new UserResource($this->recipient),
         ];

@@ -2,6 +2,7 @@
 
 return [
     'success' => 'success',
+    'logout'=>'successfully logout',
     'user_not_found' => 'user not exist',
     'already_signed'=>'this account already signed from another device you should logout from the other device first',
     'already_signed_all_user'=>'Log out of one of the accounts first to be able to log in',
